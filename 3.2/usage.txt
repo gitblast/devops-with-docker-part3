@@ -1,0 +1,4 @@
+3 required args:
+
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock \ 
+    <container_name> <github_repo> <docker_repo> <docker_username>
