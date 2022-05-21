@@ -1,0 +1,9 @@
+BACKEND:
+
+before: 466MB
+after: 23.3MB
+
+FRONTEND:
+
+before: 180MB
+after: 124MB

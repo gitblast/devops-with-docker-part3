@@ -1,0 +1,22 @@
+
+FROM golang:1.17-alpine as build-stage
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go build
+
+FROM alpine
+
+ENV REQUEST_ORIGIN=http://localhost
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+COPY --from=build-stage /usr/src/app/server .
+
+RUN adduser -S appuser && chown appuser .
+USER appuser
+
+CMD ./server
