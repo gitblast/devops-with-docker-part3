@@ -1,0 +1,4 @@
+langservers:
+  robot:
+    - python
+    - ./robotframework-lsp/robotframework-ls/src/robotframework_ls/__main__.py
